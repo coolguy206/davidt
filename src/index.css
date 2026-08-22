@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-jet: 'JetBrains Mono', monospace;
+  --font-corm: 'Cormorant Garamond', serif;
+  --color-gray: #e6e2da;
+  --color-dk-gray: #7c7469;
+  --color-bronse: #b39266;
+  --color-gold: #d4af37;
+  --text-responsive: var(--font-size-dynamic);
+}
+
+@layer base {
+  :root {
+    /* Mobile font size default */
+    --font-size-dynamic: clamp(16px, 4vw, 16px);
+  }
+
+  /* Desktop breakpoint (e.g., 768px or 1024px) */
+  @media (min-width: 1024px) {
+    :root {
+      /* Desktop font size adjustment */
+      --font-size-dynamic: clamp(16px, 4vw, 16px);
+    }
+  }
+}
+
+@utility cta-btn {
+  @apply inline-flex h-20 items-center border-t border-b border-gold font-corm text-[clamp(22px,6vw,32px)] text-gold;
+}
