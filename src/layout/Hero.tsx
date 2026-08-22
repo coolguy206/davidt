@@ -17,7 +17,7 @@ export const Hero = () => {
       <div className="order-1 w-full font-corm lg:order-2 lg:w-1/2 lg:pl-10 2xl:p-0">
         <h1 className="mb-10 text-gray text-[clamp(32px,8vw,50px)]">
           Engineering high-performance storefronts, headless architectures, and
-          robust data pipelines.
+          robust data pipelines..
         </h1>
         <p className="mb-10 text-[clamp(22px,6vw,24px)] text-bronse">
           Senior Software Engineer with 8+ years of experience specializing in
