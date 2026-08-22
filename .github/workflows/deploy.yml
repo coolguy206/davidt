@@ -1,0 +1,38 @@
+name: Production Sync CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main # Automatically runs every single time you push code to your main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Phase 1: Download your source code files into the virtual runner frame
+      - name: 📥 Fetch Source Code
+        uses: actions/checkout@v4
+
+      # Phase 2: Provision a clean Node.js runtime environment 
+      - name: 🛠️ Initialize Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # Phase 3: Install pristine dependency configurations and compile project strings
+      - name: 📦 Compile Production Bundle
+        run: |
+          npm ci
+          npm run build
+
+      # Phase 4: Securely stream the compiled dist folder assets directly to cPanel
+      - name: 🚀 Stream Static Distribution to InMotion
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.INMOTION_FTP_SERVER }}
+          username: ${{ secrets.INMOTION_FTP_USERNAME }}
+          password: ${{ secrets.INMOTION_FTP_PASSWORD }}
+          local-dir: ./dist/ # Uploads only your optimized static web production files
+          server-dir: ./public_html/ # Drops them directly into your web root tracking slot
+          dry-run: false
