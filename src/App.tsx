@@ -145,13 +145,13 @@ export const App = () => {
                   className="w-full justify-center lg:w-auto"
                 />
               </li>
-              <li className="w-full">
+              <li className="w-full hidden">
                 <CTA
                   buttonText="Marvel API"
                   buttonLink="https://davidtproductions.com/apps/marvel-comics/#/"
                   newTab={true}
                   arrowRight={true}
-                  className="w-full justify-center lg:w-auto hidden"
+                  className="w-full justify-center lg:w-auto"
                 />
               </li>
             </ul>
