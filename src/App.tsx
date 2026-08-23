@@ -151,7 +151,7 @@ export const App = () => {
                   buttonLink="https://davidtproductions.com/apps/marvel-comics/#/"
                   newTab={true}
                   arrowRight={true}
-                  className="w-full justify-center lg:w-auto"
+                  className="w-full justify-center lg:w-auto hidden"
                 />
               </li>
             </ul>
