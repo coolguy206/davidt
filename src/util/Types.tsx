@@ -16,5 +16,7 @@ export interface ProjectData {
   solutions: string | SolutionPoint[];
   impact: string;
   codeSnippet?: string;
-  figmaEmbedUrl?: string;
+  embedUrl?: string;
+  githubUrl?: string; 
+  label?: string;
 }

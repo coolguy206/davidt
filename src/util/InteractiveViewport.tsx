@@ -1,20 +1,25 @@
+// InteractiveViewport.tsx
 import { useState } from 'react';
 
-interface FigmaViewportProps {
+interface InteractiveViewportProps {
   embedUrl: string;
+  label?: string; // ⚡ ADDED: Optional dynamic label (Defaults to 'Workspace')
 }
 
-export const FigmaViewport = ({ embedUrl }: FigmaViewportProps) => {
+export const InteractiveViewport = ({
+  embedUrl,
+  label = 'Workspace',
+}: InteractiveViewportProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <aside className="w-full lg:w-1/2">
+      {/* ⚡ DYNAMIC BUTTON TEXT CONTROLS */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="cta-btn w-full justify-center xl:hidden"
       >
-        <span>
-          {isExpanded ? 'Hide Figma Workspace -' : 'View Figma Workspace +'}
-        </span>
+        <span>{isExpanded ? `Hide ${label} -` : `View ${label} +`}</span>
       </button>
 
       <div
@@ -29,7 +34,7 @@ export const FigmaViewport = ({ embedUrl }: FigmaViewportProps) => {
           src={embedUrl}
           allowFullScreen
           loading="lazy"
-          title="Figma Project Design Preview"
+          title={`${label} Interactive Live Project Preview`}
         />
       </div>
     </aside>

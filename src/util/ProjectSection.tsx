@@ -1,6 +1,6 @@
 import { ProjectDetails } from '@/util/ProjectDetails';
 import { CodeViewport } from '@/util/CodeViewport';
-import { FigmaViewport } from '@/util/FigmaViewport';
+import { InteractiveViewport } from '@/util/InteractiveViewport';
 import type { ProjectData } from '@/util/Types';
 
 interface ProjectSectionProps {
@@ -13,8 +13,8 @@ export const ProjectSection = ({ project }: ProjectSectionProps) => {
       <ProjectDetails project={project} />
       {project.codeSnippet && <CodeViewport code={project.codeSnippet} />}
 
-      {project.figmaEmbedUrl && (
-        <FigmaViewport embedUrl={project.figmaEmbedUrl} />
+      {project.embedUrl && (
+        <InteractiveViewport embedUrl={project.embedUrl} label={project.label} />
       )}
     </div>
   );

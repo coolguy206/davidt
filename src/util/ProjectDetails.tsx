@@ -1,5 +1,6 @@
 // ProjectDetails.tsx
 import type { ProjectData } from '@/util/Types';
+import { CTA } from './CTA';
 
 interface ProjectDetailsProps {
   project: Omit<ProjectData, 'codeSnippet'>;
@@ -52,6 +53,18 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </h3>
         <p className="font-inter text-responsive">{project.impact}</p>
       </div>
+
+      {project.githubUrl && (
+        <div className="mt-12 pt-4">
+          <CTA
+            buttonText="Inspect Source Code"
+            buttonLink={project.githubUrl}
+            className=""
+            newTab={true} // Opens securely in a fresh browser tab
+            arrowRight={true} // Rotates your arrow icon cleanly
+          />
+        </div>
+      )}
     </article>
   );
 };

@@ -9,8 +9,23 @@ import { Job } from '@/util/Job';
 import './App.css';
 
 const projects: ProjectData[] = [
-  {
+    {
     id: '01',
+    title:
+      'Enterprise Headless Shopify Storefront Engine',
+    techStack: 'Next.js (App Router) | Shopify Storefront API (GraphQL Schema v2026-07) | TypeScript | React Context API | Tailwind CSS | Vercel Edge Cloud',
+    solutionHeading: 'The Engineering Solution',
+    challenge:
+      'Monolithic e-commerce architectures frequently lock businesses into rigid presentational layers, suffer from slow page load speeds due to bloated rendering processes, and bottleneck user retention by over-fetching data over constrained mobile connections.',
+    solutions: `Built a decoupled, serverless frontend application utilizing an asynchronous GraphQL layout mesh to query product catalog objects directly from Shopify’s high-performance edge database servers. Engineered a type-safe local storage state architecture (React Context API) to optimize Shopify's native line-item structures inside a local cart drawer. This allowed for instant subtotal calculation, automated state tracking synchronizations across route segments, and zero-latency line migrations.`,
+    impact:
+      'Offloaded all transactional compliance and payment liability entirely by generating encrypted session checkout keys via Shopify mutations and handling a seamless redirect context (window.location.href). By leveraging Next.js Incremental Static Regeneration (revalidate: 60), page loading speeds dropped to sub-100 millisecond intervals while maintaining absolute real-time inventory precision.',
+    embedUrl: 'https://nextjs-headless-shopify-sandbox.vercel.app/',
+    githubUrl:`https://github.com/coolguy206/nextjs-headless-shopify-sandbox`,
+    label: `Live Storefront`,
+  },
+  {
+    id: '02',
     title:
       ' Enterprise Data Migration Pipeline & Custom Storefront Architecture',
     techStack: 'Node.js | GraphQL | Shopify Admin API | Amazon S3 | Liquid',
@@ -37,7 +52,7 @@ const projects: ProjectData[] = [
     codeSnippet: Project1Code,
   },
   {
-    id: '02',
+    id: '03',
     title: 'Pony Rescue Club Responsive Design System',
     techStack:
       'Figma | HTML5 | CSS Grid & Flexbox | Responsive Design Systems | Component Architecture',
@@ -49,7 +64,8 @@ const projects: ProjectData[] = [
       'Developed a structured visual taxonomy using a strategic, high-contrast color-blocking palette (forest green and warm desert tones). This breaks high-density informational content into digestible, accessible text blocks while maintaining compliance with WCAG contrast guidelines.',
     impact:
       'Engineered a responsive fluid grid layout that seamlessly shifts a multi-column desktop dashboard into a streamlined, single-column mobile view. Intentionally compressed whitespace components and micro-margins in the mobile architecture to keep contextual parent-student guidelines logically grouped on smaller screens.',
-    figmaEmbedUrl: `https://embed.figma.com/design/mziQAT8tFvjcHFZFXFV3Wm/Pony-Rescue-Club-Visual-Design?node-id=219-139&embed-host=share`,
+    embedUrl: `https://embed.figma.com/design/mziQAT8tFvjcHFZFXFV3Wm/Pony-Rescue-Club-Visual-Design?node-id=219-139&embed-host=share`,
+     label: `Figma Workspace`,
   },
 ];
 
