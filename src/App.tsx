@@ -9,11 +9,11 @@ import { Job } from '@/util/Job';
 import './App.css';
 
 const projects: ProjectData[] = [
-    {
+  {
     id: '01',
-    title:
-      'Enterprise Headless Shopify Storefront Engine',
-    techStack: 'Next.js (App Router) | Shopify Storefront API (GraphQL Schema v2026-07) | TypeScript | React Context API | Tailwind CSS | Vercel Edge Cloud',
+    title: 'Enterprise Headless Shopify Storefront Engine',
+    techStack:
+      'Next.js (App Router) | Shopify Storefront API (GraphQL Schema v2026-07) | TypeScript | React Context API | Tailwind CSS | Vercel Edge Cloud',
     solutionHeading: 'The Engineering Solution',
     challenge:
       'Monolithic e-commerce architectures frequently lock businesses into rigid presentational layers, suffer from slow page load speeds due to bloated rendering processes, and bottleneck user retention by over-fetching data over constrained mobile connections.',
@@ -21,11 +21,53 @@ const projects: ProjectData[] = [
     impact:
       'Offloaded all transactional compliance and payment liability entirely by generating encrypted session checkout keys via Shopify mutations and handling a seamless redirect context (window.location.href). By leveraging Next.js Incremental Static Regeneration (revalidate: 60), page loading speeds dropped to sub-100 millisecond intervals while maintaining absolute real-time inventory precision.',
     embedUrl: 'https://nextjs-headless-shopify-sandbox.vercel.app/',
-    githubUrl:`https://github.com/coolguy206/nextjs-headless-shopify-sandbox`,
+    githubUrl: `https://github.com/coolguy206/nextjs-headless-shopify-sandbox`,
     label: `Live Storefront`,
   },
   {
     id: '02',
+    title: 'Real-Time Event Orchestration Engine & Live Karaoke Queue Manager',
+    techStack:
+      'Next.js 15, TypeScript, Supabase, PostgreSQL, Tailwind CSS, Lucide React, YouTube Data API v3',
+    challenge:
+      'Engineered an event-driven queue registration application to manage a high-traffic community stage under strict network and resource constraints. The project required synchronous live updates across disparate mobile devices without hitting aggressive daily API quotas, alongside an intuitive host console that supports buttery-smooth mobile reordering without sluggish or bloated third-party layout dependencies.',
+    solutionHeading: 'The Engineering Solution',
+    solutions: [
+      {
+        label: 'WebSocket State Synchronization',
+        description:
+          'Implemented Supabase Real-Time Client Pipelines utilizing PostgreSQL replication via WebSockets to stream instant lineup updates across all parent devices the microsecond a status flag flips or a listing shifts.',
+      },
+      {
+        label: 'Secure Serverless API Proxy',
+        description:
+          'Architected a secure Next.js Serverless API Route to act as a YouTube Data API v3 Proxy, securing private Google Cloud credentials while automatically injecting contextual modifiers to enforce high-relevancy backing track streams.',
+      },
+      {
+        label: 'Debounced Token Optimization',
+        description:
+          'Developed a client-side debouncing optimization engine (500ms) to bundle typing inputs into singular queries, heavily reducing API quota consumption during burst registration traffic.',
+      },
+      {
+        label: 'Mid-Point Floating Point Math',
+        description:
+          'Programmed a high-performance queue-sorting layout built on the native HTML5 Drag and Drop API, implementing mid-point float math database calculations (prev_order + (next_order - prev_order) / 2) to dynamically shift list elements without forcing costly database index rewrites.',
+      },
+      {
+        label: 'Suspense Production Hardening',
+        description:
+          'Hardened production delivery against Next.js build-time prerendering failures by decoupling search metadata hooks inside isolated React Suspense boundary containers to safely defer execution to client-side runtime environment viewports.',
+      },
+    ],
+    impact:
+      'Successfully deployed an zero-friction, automated full-stack platform capable of processing fluid sequential sign-ups. Eliminated physical administrative paper-slip overhead while maintaining a steady 100% success rate on real-time layout updates over unstable local cellular networks.',
+    embedUrl: 'https://live-karaoke-hub.vercel.app/',
+    githubUrl: `https://github.com/coolguy206/Live-Karaoke-Hub`,
+    label: `Live App`,
+  },
+
+  {
+    id: '03',
     title:
       ' Enterprise Data Migration Pipeline & Custom Storefront Architecture',
     techStack: 'Node.js | GraphQL | Shopify Admin API | Amazon S3 | Liquid',
@@ -52,7 +94,7 @@ const projects: ProjectData[] = [
     codeSnippet: Project1Code,
   },
   {
-    id: '03',
+    id: '04',
     title: 'Pony Rescue Club Responsive Design System',
     techStack:
       'Figma | HTML5 | CSS Grid & Flexbox | Responsive Design Systems | Component Architecture',
@@ -65,7 +107,7 @@ const projects: ProjectData[] = [
     impact:
       'Engineered a responsive fluid grid layout that seamlessly shifts a multi-column desktop dashboard into a streamlined, single-column mobile view. Intentionally compressed whitespace components and micro-margins in the mobile architecture to keep contextual parent-student guidelines logically grouped on smaller screens.',
     embedUrl: `https://embed.figma.com/design/mziQAT8tFvjcHFZFXFV3Wm/Pony-Rescue-Club-Visual-Design?node-id=219-139&embed-host=share`,
-     label: `Figma Workspace`,
+    label: `Figma Workspace`,
   },
 ];
 
@@ -139,8 +181,8 @@ export const App = () => {
             <p className="text-center font-jet text-responsive text-gold 2xl:mb-10">
               SYSTEM SANDBOX & COMPONENT LABS || Lightweight functional
               sandboxes built to isolate state
-              <br className="hidden lg:block" /> management, custom routing,
-              and client-side API orchestration.
+              <br className="hidden lg:block" /> management, custom routing, and
+              client-side API orchestration.
             </p>
             <ul className="my-10 flex w-full flex-wrap justify-center gap-10 text-center text-responsive lg:flex-nowrap lg:justify-between">
               <li className="w-full">
@@ -161,7 +203,7 @@ export const App = () => {
                   className="w-full justify-center lg:w-auto"
                 />
               </li>
-              <li className="w-full hidden">
+              <li className="hidden w-full">
                 <CTA
                   buttonText="Marvel API"
                   buttonLink="https://davidtproductions.com/apps/marvel-comics/#/"
