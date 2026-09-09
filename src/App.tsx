@@ -11,15 +11,28 @@ import './App.css';
 const projects: ProjectData[] = [
   {
     id: '01',
-    title: 'Enterprise Headless Shopify Storefront Engine',
+    title: 'Headless E-Commerce Shopify Engine',
     techStack:
-      'Next.js (App Router) | Shopify Storefront API (GraphQL Schema v2026-07) | TypeScript | React Context API | Tailwind CSS | Vercel Edge Cloud',
+      'Next.js (App Router) | Shopify Storefront API (GraphQL Schema v2026-07) | TypeScript | React Context API | Lucide UI | Tailwind CSS | Vercel Edge Cloud',
     solutionHeading: 'The Engineering Solution',
     challenge:
       'Monolithic e-commerce architectures frequently lock businesses into rigid presentational layers, suffer from slow page load speeds due to bloated rendering processes, and bottleneck user retention by over-fetching data over constrained mobile connections.',
-    solutions: `Built a decoupled, serverless frontend application utilizing an asynchronous GraphQL layout mesh to query product catalog objects directly from Shopify’s high-performance edge database servers. Engineered a type-safe local storage state architecture (React Context API) to optimize Shopify's native line-item structures inside a local cart drawer. This allowed for instant subtotal calculation, automated state tracking synchronizations across route segments, and zero-latency line migrations.`,
+    solutions: [
+    {
+      label: "Decoupled Edge Hydration",
+      description: "Engineered a fully serverless frontend application utilizing client component hydration, interfacing natively with the Shopify Storefront API via highly optimized asynchronous GraphQL query and mutation structures."
+    },
+    {
+      label: "On-the-Fly Processor Matrix",
+      description: "Built a lightning-fast client-side array processing engine using native JavaScript filtering (.filter) and real-time numerical sorting (.sort) pipelines to compute price variations and out-of-stock exclusions dynamically in milliseconds without hardware thread latency."
+    },
+    {
+      label: "Optimistic State Loop",
+      description: "Implemented a type-safe local storage state architecture (React Context API) paired with an optimistic UI cart drawer layout to manage zero-latency line migrations, instant subtotal cost aggregation, and automated radar-dot Toast notification alerts."
+    }
+  ],
     impact:
-      'Offloaded all transactional compliance and payment liability entirely by generating encrypted session checkout keys via Shopify mutations and handling a seamless redirect context (window.location.href). By leveraging Next.js Incremental Static Regeneration (revalidate: 60), page loading speeds dropped to sub-100 millisecond intervals while maintaining absolute real-time inventory precision.',
+      'Successfully offloaded 100% of PCI transactional compliance and credit card payment vulnerabilities entirely by generating encrypted session checkout tokens via remote GraphQL mutations, creating a seamless background redirect mesh. By moving sorting computations to client-side lifecycle blocks, network data over-fetching dropped significantly, driving catalog rendering execution speeds down to sub-100ms intervals.',
     embedUrl: 'https://nextjs-headless-shopify-sandbox.vercel.app/',
     githubUrl: `https://github.com/coolguy206/nextjs-headless-shopify-sandbox`,
     label: `Live Storefront`,
