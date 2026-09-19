@@ -79,8 +79,45 @@ const projects: ProjectData[] = [
     label: `Live App`,
   },
 
-  {
+    {
     id: '03',
+    title: 'OLM Volunteer Hub – Edge-First Event Tracking System',
+    techStack:
+      'Next.js 15, TypeScript, React, Tailwind CSS, HTML5 Geolocation API, Browser localStorage API & Window Network Event Listener',
+    challenge:
+      'An elementary school needed to track physical volunteer metrics on an outdoor field during a high-density community movie night, facing potential cell-coverage dropouts and redundant user double-submissions.',
+    solutionHeading: 'The Engineering Solution',
+    solutions: [
+      {
+        label: 'API Data Isolation',
+        description:
+          `Built a secure Next.js serverless proxy layer to request and parse live schedule contracts from the SignUpGenius V2 API, keeping private auth tokens safely concealed on Vercel's edge network.`,
+      },
+      {
+        label: 'Geofenced Entry Verification',
+        description:
+          `Combined the browser's native HTML5 Geolocation API with the Haversine trigonometric equation to compute real-time coordinates, mapping a strict 150-meter validation boundary over the campus to prevent remote clock-ins.`,
+      },
+      {
+        label: 'Offline Cache Synchronization',
+        description:
+          `Developed a zero-data-loss fallback network layer using localStorage and window online/offline event listeners. If parents drop signal on the field, their check-in payload queues locally and auto-flushes to the database seamlessly upon reconnection.`,
+      },
+      {
+        label: 'Idempotent Data Ingestion',
+        description:
+          `Programmed a custom Google Apps Script HTTP POST processor that checks the last 100 spreadsheet rows on-the-fly, instantly dropping duplicate button-mashes or invalid status transitions to ensure an immaculate chronological ledger.`,
+      },  
+    ],
+    impact:
+      `Successfully automated live data orchestration for the OLM School Movie Night, seamlessly managing tracking points for 100+ parent volunteers on campus. By migrating the school from a traditional paper sign-in method to the OLM Volunteer Hub web platform, the application eliminated 100% of manual post-event data reconciliation overhead for the PTO board. The application's hardware-level geofencing and duplicate-blocking algorithms ensured 100% data integrity with zero fraudulent or duplicate log rows, while the local storage buffer safely synchronized 100% of offline check-ins during field cellular outages, resulting in flawless event-night logistics.`,
+    embedUrl: 'https://olm-volunteer-hub.vercel.app/',
+    githubUrl: `https://github.com/coolguy206/olm-volunteer-hub`,
+    label: `Live App`,
+  },
+
+  {
+    id: '04',
     title:
       ' Enterprise Data Migration Pipeline & Custom Storefront Architecture',
     techStack: 'Node.js | GraphQL | Shopify Admin API | Amazon S3 | Liquid',
@@ -107,7 +144,7 @@ const projects: ProjectData[] = [
     codeSnippet: Project1Code,
   },
   {
-    id: '04',
+    id: '05',
     title: 'Pony Rescue Club Responsive Design System',
     techStack:
       'Figma | HTML5 | CSS Grid & Flexbox | Responsive Design Systems | Component Architecture',
