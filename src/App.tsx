@@ -41,7 +41,7 @@ const projects: ProjectData[] = [
     id: '02',
     title: 'Real-Time Event Orchestration Engine & Live Karaoke Queue Manager',
     techStack:
-      'Next.js 15, TypeScript, Supabase, PostgreSQL, Tailwind CSS, Lucide React, YouTube Data API v3',
+      'Next.js 15 | TypeScript | Supabase | PostgreSQL | Tailwind CSS | Lucide React | YouTube Data API v3',
     challenge:
       'Engineered an event-driven queue registration application to manage a high-traffic community stage under strict network and resource constraints. The project required synchronous live updates across disparate mobile devices without hitting aggressive daily API quotas, alongside an intuitive host console that supports buttery-smooth mobile reordering without sluggish or bloated third-party layout dependencies.',
     solutionHeading: 'The Engineering Solution',
@@ -83,7 +83,7 @@ const projects: ProjectData[] = [
     id: '03',
     title: 'OLM Volunteer Hub – Edge-First Event Tracking System',
     techStack:
-      'Next.js 15, TypeScript, React, Tailwind CSS, HTML5 Geolocation API, Browser localStorage API & Window Network Event Listener',
+      'Next.js 15 | TypeScript | React | Tailwind CSS | HTML5 Geolocation API | Browser localStorage API & Window Network Event Listener',
     challenge:
       'An elementary school needed to track physical volunteer metrics on an outdoor field during a high-density community movie night, facing potential cell-coverage dropouts and redundant user double-submissions.',
     solutionHeading: 'The Engineering Solution',
