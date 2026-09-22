@@ -4,7 +4,7 @@ import { Hero } from '@/layout/Hero';
 import Project1Code from '@/snippets/Project1.js?raw';
 import { ProjectSection } from '@/util/ProjectSection';
 import type { ProjectData } from '@/util/Types';
-import { CTA } from '@/util/CTA';
+// import { CTA } from '@/util/CTA';
 import { Job } from '@/util/Job';
 import './App.css';
 
