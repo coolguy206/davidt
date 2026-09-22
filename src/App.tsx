@@ -224,6 +224,8 @@ export const App = () => {
             </div>
           </section>
 
+          {/*
+
           <section className="border-b border-dk-gray py-10 text-white">
             <h2 className="mb-10 text-center font-corm text-[clamp(32px,10vw,40px)] text-bronse 2xl:text-[40px]">
               SANDBOX PLAYGROUNDS
@@ -264,6 +266,8 @@ export const App = () => {
               </li>
             </ul>
           </section>
+
+          */}
 
           <section className="py-10 text-white">
             <h2 className="mb-10 text-center font-corm text-[clamp(32px,8vw,40px)] text-bronse 2xl:text-[40px]">
